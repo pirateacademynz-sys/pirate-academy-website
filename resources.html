@@ -55,7 +55,6 @@
   @media(min-width:760px){.f-grid{grid-template-columns:1.6fr 1fr 1fr 1.2fr}}
   .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s}.reveal.in{opacity:1;transform:none}
   @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
-  /* Page-specific */
   .phead{background:linear-gradient(180deg,#f4fbfc,#e9f5f8);padding:40px 0 30px;text-align:center}
   .crumb{font-size:.85rem;color:var(--muted);margin-bottom:8px}.crumb a{color:var(--brand)}
   .subnav{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:64px;z-index:90}
@@ -76,10 +75,8 @@
   .mini-days{display:flex;flex-wrap:wrap;gap:6px}.mini-days span{font-size:.78rem;font-weight:700;color:#5a3e00;background:#fdf8ec;border:1px solid #efdcae;border-radius:999px;padding:5px 10px}
   .free-badge{display:inline-flex;align-items:center;gap:6px;background:#e8f5e9;color:#1B5E20;border:1px solid #a5d6a7;font-weight:800;font-size:.8rem;padding:5px 12px;border-radius:999px;align-self:flex-start}
   @media(min-width:820px){.cards-feature{grid-template-columns:.9fr 1.1fr}}
-  /* Download gate form */
   .gate{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius-sm);padding:18px}
-  .gate .field{margin-bottom:12px}
-  .gate label{display:block;font-weight:700;margin-bottom:6px;font-size:.92rem}
+  .gate .field{margin-bottom:12px}.gate label{display:block;font-weight:700;margin-bottom:6px;font-size:.92rem}
   .gate input{width:100%;min-height:48px;padding:12px 14px;border:1.5px solid var(--line);border-radius:12px;font:inherit;color:var(--ink);background:#fff}
   .gate input:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px rgba(12,90,115,.15)}
   .gate .privacy{font-size:.82rem;color:var(--muted);margin:4px 0 0;display:flex;gap:6px;align-items:flex-start}
@@ -87,9 +84,7 @@
   .btn-green{background:#2E5C3A;color:#fff}.btn-green:hover{background:#1e3f28;color:#fff}
   .btn-gold{background:#8b6914;color:#fff}.btn-gold:hover{background:#6f540f;color:#fff}
   .gate-success{display:none;background:#e8f5e9;border:1px solid #a5d6a7;border-radius:var(--radius-sm);padding:18px}
-  .gate-success.show{display:block}
-  .gate-success h4{margin:0 0 6px;color:#1B5E20;font-size:1.05rem}
-  .gate-success p{margin:0 0 12px;color:#3e5a44;font-size:.95rem}
+  .gate-success.show{display:block}.gate-success h4{margin:0 0 6px;color:#1B5E20;font-size:1.05rem}.gate-success p{margin:0 0 12px;color:#3e5a44;font-size:.95rem}
   .gate-success .dl-actions{display:flex;flex-wrap:wrap;gap:10px}
   .req{color:var(--coral)}
 </style>
@@ -173,7 +168,7 @@
         <div class="tagline">Powered by Faith · Made for Families · Inspired by the Quran</div>
       </div>
       <div class="info">
-        <span class="free-badge">💛 Free download</span>
+        <span class="free-badge">💛 Free printable PDF</span>
         <p>A gentle 7-day journey for Muslim families. Each printable card includes a Qur'anic ayah, a daily affirmation, three simple actions and a short dua — helping children build safe, kind and balanced digital habits.</p>
         <div class="mini-days">
           <span>Day 1 · Allah sees everything online</span>
@@ -185,24 +180,22 @@
           <span>Day 7 · Digital champion!</span>
         </div>
 
-        <!-- Download gate form -->
         <form class="gate" id="gateForm" novalidate>
-          <p style="margin:0 0 10px;font-weight:800;color:var(--ink)">Get the free cards</p>
+          <p style="margin:0 0 10px;font-weight:800;color:var(--ink)">Get the free cards (PDF)</p>
           <p style="margin:-6px 0 12px;font-size:.9rem;color:var(--muted)">Just a few details and the download is yours.</p>
           <div class="field"><label for="rcName">Your name <span class="req">*</span></label><input id="rcName" type="text" autocomplete="name" required></div>
           <div class="field"><label for="rcEmail">Your email <span class="req">*</span></label><input id="rcEmail" type="email" autocomplete="email" placeholder="name@example.com" required></div>
           <div class="field"><label for="rcLoc">Your location (city &amp; country) <span class="req">*</span></label><input id="rcLoc" type="text" autocomplete="address-level2" placeholder="e.g. Christchurch, New Zealand" required></div>
-          <button type="submit" class="btn btn-green btn-lg btn-block">💛 Get the free cards</button>
+          <button type="submit" class="btn btn-green btn-lg btn-block">💛 Get the free cards (PDF)</button>
           <p class="privacy"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 3l8 4v5c0 5-3.5 7.5-8 9-4.5-1.5-8-4-8-9V7z"/></svg><span>We'll only use these details to send you occasional free family resources. No spam — unsubscribe anytime.</span></p>
         </form>
 
-        <!-- Revealed after submit -->
         <div class="gate-success" id="gateSuccess" role="status" aria-live="polite">
           <h4>✅ Thank you! Your cards are ready.</h4>
-          <p>Your download should start automatically. You can also open and print the cards below.</p>
+          <p>Your PDF download should start automatically. You can also open it below.</p>
           <div class="dl-actions">
-            <a class="btn btn-gold btn-lg" id="dlZip" href="pirate-academy-family-cards.zip" download>⬇️ Download the pack (ZIP)</a>
-            <a class="btn btn-ghost btn-lg" href="family-cards.html">🖨️ Open &amp; print the cards</a>
+            <a class="btn btn-gold btn-lg" id="dlPdf" href="family-cards.pdf" download>⬇️ Download the cards (PDF)</a>
+            <a class="btn btn-ghost btn-lg" href="family-cards.pdf" target="_blank" rel="noopener">🔍 Open the PDF</a>
           </div>
         </div>
       </div>
@@ -243,10 +236,8 @@
   var r=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
   if(!r&&'IntersectionObserver'in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.14,rootMargin:'0px 0px -40px 0px'});$$('.reveal').forEach(function(el){io.observe(el);});}else{$$('.reveal').forEach(function(el){el.classList.add('in');});}
 
-  // ===== Download gate =====
-  // OPTIONAL: paste a Formspree endpoint here to receive each download lead by email.
+  // Download gate → sends lead to your inbox (Formspree) and starts the PDF download
   var FORMSPREE_RESOURCES='https://formspree.io/f/xqpkyllz';
-  var CONTACT='hello@pirateacademy.co.nz';
   function emailOk(v){return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test((v||'').trim());}
   var form=$('#gateForm'), success=$('#gateSuccess');
   form.addEventListener('submit',function(e){
@@ -255,18 +246,16 @@
     if(!name){alert('Please enter your name.');$('#rcName').focus();return;}
     if(!emailOk(mail)){alert('Please enter a valid email address.');$('#rcEmail').focus();return;}
     if(!loc){alert('Please enter your location (city & country).');$('#rcLoc').focus();return;}
-    // Send the lead to your inbox if a Formspree endpoint is set
     if(FORMSPREE_RESOURCES && FORMSPREE_RESOURCES.indexOf('http')===0){
       var fd=new FormData();
       fd.append('name',name); fd.append('email',mail); fd.append('location',loc);
-      fd.append('resource','My 7-Day Family Cards'); fd.append('_subject','New free resource download — Pirate Academy');
+      fd.append('resource','My 7-Day Family Cards (PDF)'); fd.append('_subject','New free resource download — Pirate Academy');
       fetch(FORMSPREE_RESOURCES,{method:'POST',body:fd,headers:{'Accept':'application/json'}});
     }
-    // Reveal the download + start it automatically
     form.style.display='none';
     success.classList.add('show');
     success.setAttribute('tabindex','-1'); success.focus();
-    var a=$('#dlZip');
+    var a=$('#dlPdf');
     try{ a.click(); }catch(err){ window.location.href=a.href; }
   });
 })();
