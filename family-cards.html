@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My 7-Day Family Cards — Powered by Faith · Made for Families · Inspired by the Quran | Pirate Academy</title>
+<meta name="description" content="A free printable pack of 7 daily cards to help Muslim families talk about safe, kind and balanced digital habits — each with an ayah, a daily affirmation, three simple actions and a dua. From Pirate Academy.">
+<link rel="icon" type="image/png" href="./favicon.png">
+<meta name="theme-color" content="#2E5C3A">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box; margin:0; padding:0}
+  body{font-family:'Nunito',system-ui,-apple-system,"Segoe UI",sans-serif; background:#f0ebe0; min-height:100vh; padding:26px 18px 60px; color:#2c3e1f}
+  .topbar{max-width:1100px; margin:0 auto 22px; display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap}
+  .topbar a.back{display:inline-flex; align-items:center; gap:8px; color:#2E5C3A; font-weight:800; text-decoration:none; background:#fff; border:1px solid #d9cfb8; padding:9px 16px; border-radius:50px}
+  .topbar a.back:hover{background:#fbf7ee}
+  .brandline{display:inline-flex; align-items:center; gap:10px}
+  .brandline img{width:34px; height:51px; object-fit:contain}
+  .brandline b{font-size:.95rem; color:#2c3e1f}
+  .brandline span{display:block; font-size:.62rem; letter-spacing:.12em; text-transform:uppercase; color:#8b6914}
+  .page-header{text-align:center; margin-bottom:30px}
+  .bismillah{font-family:'Scheherazade New',serif; font-size:26px; color:#8b6914; margin-bottom:8px; direction:rtl}
+  .page-header h1{font-size:clamp(24px,5vw,32px); font-weight:900; letter-spacing:-.5px}
+  .page-header p{font-size:15px; color:#6b5e42; margin-top:6px; font-weight:700}
+  .actions{display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:16px}
+  .btn{display:inline-flex; align-items:center; gap:8px; padding:12px 28px; border:none; border-radius:50px; font-size:15px; font-weight:800; cursor:pointer; font-family:inherit; text-decoration:none}
+  .btn-print{background:#2E5C3A; color:#fff} .btn-print:hover{background:#1e3f28}
+  .btn-alt{background:#fff; color:#2E5C3A; border:2px solid #cfe3d4} .btn-alt:hover{background:#f4faf5}
+  .hint{max-width:640px; margin:14px auto 0; text-align:center; font-size:13px; color:#6b5e42}
+  .cards-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:22px; max-width:1100px; margin:26px auto 0}
+  .card{border-radius:24px; overflow:hidden; background:#fff; border:3px solid rgba(0,0,0,.07); display:flex; flex-direction:column; break-inside:avoid; page-break-inside:avoid}
+  .card-header{padding:22px 20px 18px; position:relative; overflow:hidden; min-height:150px; display:flex; flex-direction:column; justify-content:flex-end}
+  .geo-bg{position:absolute; inset:0; opacity:.12}
+  .day-badge{position:absolute; top:14px; left:16px; background:rgba(255,255,255,.35); color:rgba(255,255,255,.97); font-size:11px; font-weight:800; padding:4px 12px; border-radius:20px; letter-spacing:1.2px; text-transform:uppercase}
+  .card-emoji{position:absolute; top:10px; right:16px; font-size:46px; line-height:1; filter:drop-shadow(0 2px 6px rgba(0,0,0,.2))}
+  .card-title{font-size:20px; font-weight:900; color:#fff; text-shadow:0 1px 4px rgba(0,0,0,.25); line-height:1.2; margin-bottom:4px; position:relative; z-index:2}
+  .card-subtitle{font-size:12px; color:rgba(255,255,255,.9); font-weight:700; font-style:italic; position:relative; z-index:2}
+  .card-body{padding:16px 18px 18px; display:flex; flex-direction:column; gap:12px; flex:1}
+  .ayah-box{background:#fdf8ec; border-left:4px solid #c9a84c; border-radius:0 12px 12px 0; padding:12px 14px}
+  .ayah-arabic{font-family:'Scheherazade New',serif; font-size:20px; color:#5a3e00; text-align:right; line-height:2; direction:rtl; display:block; margin-bottom:6px}
+  .ayah-translation{font-size:12px; color:#7a6030; font-style:italic; line-height:1.5}
+  .ayah-ref{font-size:11px; color:#b9962f; font-weight:800; margin-top:4px}
+  .affirmation-box{border-radius:14px; padding:12px 14px; border:2px dashed}
+  .affirmation-label{font-size:10px; font-weight:800; text-transform:uppercase; letter-spacing:1.2px; margin-bottom:5px}
+  .affirmation-text{font-size:13.5px; font-weight:800; line-height:1.45}
+  .section-label{font-size:10px; font-weight:800; text-transform:uppercase; letter-spacing:1.2px; color:#888; margin-bottom:7px}
+  .tip-item{display:flex; align-items:flex-start; gap:8px; margin-bottom:6px}
+  .tip-num{width:20px; height:20px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:900; color:#fff; flex-shrink:0; margin-top:1px}
+  .tip-text{font-size:12.5px; color:#333; line-height:1.45}
+  .dua-box{border-radius:12px; padding:10px 12px; text-align:center}
+  .dua-label{font-size:10px; font-weight:800; text-transform:uppercase; letter-spacing:1px; margin-bottom:3px}
+  .dua-text{font-family:'Scheherazade New',serif; font-size:17px; direction:rtl; line-height:1.8}
+  .stars-section{margin-top:auto}
+  .stars-row{display:flex; gap:5px; justify-content:center; margin-top:6px}
+  .star-box{width:30px; height:30px; border-radius:8px; border:2px solid #e0d5c0; display:flex; align-items:center; justify-content:center; font-size:16px; color:#d4b84a}
+  .star-caption{font-size:10px; color:#999; text-align:center; font-weight:700}
+  .foot{max-width:1100px; margin:34px auto 0; text-align:center; color:#6b5e42; font-size:13px}
+  .foot a{color:#2E5C3A; font-weight:800; text-decoration:none}
+  @media print{
+    body{background:#fff; padding:8px}
+    .topbar,.actions,.hint,.foot{display:none !important}
+    .cards-grid{grid-template-columns:repeat(2,1fr); gap:12px; max-width:100%}
+    .card,.card-header,.ayah-box,.dua-box,.affirmation-box{-webkit-print-color-adjust:exact !important; print-color-adjust:exact !important}
+    .card{border:2px solid rgba(0,0,0,.1) !important}
+  }
+  @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a class="back" href="resources.html">← Back to Free resources</a>
+  <span class="brandline">
+    <picture><source srcset="./pa-logo.webp" type="image/webp"><img src="./pa-logo.png" alt="Pirate Academy logo"></picture>
+    <b>Pirate Academy<span>Cyber Seas of Knowledge</span></b>
+  </span>
+</div>
+
+<div class="page-header">
+  <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+  <h1>My 7-Day Family Cards</h1>
+  <p>Powered by Faith &nbsp;•&nbsp; Made for Families &nbsp;•&nbsp; Inspired by the Quran</p>
+  <div class="actions">
+    <button class="btn btn-print" onclick="window.print()">🖨️ Print / Save as PDF</button>
+    <a class="btn btn-alt" href="pirate-academy-family-cards.zip" download>⬇️ Download the pack (ZIP)</a>
+  </div>
+  <p class="hint">A free gift from Pirate Academy. Print one card each day, read the ayah together, do the three actions, make the dua — then colour a star. 🌟</p>
+</div>
+
+<div class="cards-grid" id="cards"></div>
+
+<div class="foot">
+  Free to use and share for families &amp; classrooms. © <span id="yr"></span> Pirate Academy — <a href="index.html">pirateacademy.co.nz</a>
+</div>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+var cards=[
+ {day:"Day 1",emoji:"🌿",title:"Allah Sees Everything Online",subtitle:"Al-Basir — The All-Seeing",g:["#1B5E20","#43A047"],mid:"#2E7D32",dark:"#1B5E20",affBg:"#e8f5e9",affBd:"#66BB6A",affLb:"#2E7D32",affTx:"#1B4020",duaBg:"#e8f5e9",duaLb:"#2E7D32",ar:"وَهُوَ مَعَكُمْ أَيْنَ مَا كُنتُمْ",tr:"And He is with you wherever you are.",ref:"Surah Al-Hadid 57:4",aff:"I act online the same way I would in front of Allah — because I always am!",tips:["Before clicking anything, ask: Would I be happy if Allah sees this?","Set a kind profile that reflects your Muslim identity with pride.","Close apps that make your heart feel heavy or ashamed."],dua:"اللَّهُمَّ احْفَظْنِي",duaT:"O Allah, protect me."},
+ {day:"Day 2",emoji:"🛡️",title:"I Protect My Eyes & Heart",subtitle:"Guard what enters your mind",g:["#0D47A1","#1E88E5"],mid:"#1565C0",dark:"#0D47A1",affBg:"#e3f2fd",affBd:"#42A5F5",affLb:"#1565C0",affTx:"#0a2a5c",duaBg:"#e3f2fd",duaLb:"#1565C0",ar:"قُل لِّلْمُؤْمِنِينَ يَغُضُّوا مِنْ أَبْصَارِهِمْ",tr:"Tell the believing men to lower their gaze.",ref:"Surah An-Nur 24:30",aff:"I am in control of what I watch. I choose content that is good for my heart!",tips:["Use safe-search mode on every device — ask a parent to set it up.","If something bad pops up, close it fast and tell a trusted adult.","Choose shows and videos that teach something good or make you smile."],dua:"اللَّهُمَّ طَهِّرْ قَلْبِي",duaT:"O Allah, purify my heart."},
+ {day:"Day 3",emoji:"💬",title:"My Words Online Matter",subtitle:"Speak good or stay silent",g:["#4A148C","#8E24AA"],mid:"#6A1B9A",dark:"#4A148C",affBg:"#f3e5f5",affBd:"#CE93D8",affLb:"#6A1B9A",affTx:"#2e0052",duaBg:"#f3e5f5",duaLb:"#6A1B9A",ar:"مَّن يَعْمَلْ مِثْقَالَ ذَرَّةٍ خَيْرًا يَرَهُ",tr:"Whoever does an atom's weight of good will see it.",ref:"Surah Az-Zalzalah 99:7",aff:"Every comment, message, and post I write is recorded. I choose kindness every time!",tips:["Read your message twice before sending — is it kind and true?","Never send mean comments, even as a joke. Words can deeply hurt.","Spread good news, helpful things, and kind words online."],dua:"اللَّهُمَّ اجْعَلْ كَلَامِي خَيْرًا",duaT:"O Allah, make my words good."},
+ {day:"Day 4",emoji:"⏰",title:"Time Is a Trust from Allah",subtitle:"Use it wisely — it never comes back",g:["#BF360C","#F4511E"],mid:"#C85000",dark:"#BF360C",affBg:"#fff3e0",affBd:"#FFA726",affLb:"#E65100",affTx:"#4e1a00",duaBg:"#fff3e0",duaLb:"#E65100",ar:"وَالْعَصْرِ إِنَّ الْإِنسَانَ لَفِي خُسْرٍ",tr:"By time — indeed, mankind is in loss.",ref:"Surah Al-Asr 103:1-2",aff:"I am the master of my screen time. I choose to use my hours for what truly matters!",tips:["Set a daily screen time limit with your family — and keep your promise.","Put your phone away 30 minutes before salah and before bed.","Replace one hour of scrolling this week with learning a useful skill."],dua:"اللَّهُمَّ بَارِكْ لِي فِي وَقْتِي",duaT:"O Allah, bless me in my time."},
+ {day:"Day 5",emoji:"🤝",title:"I Never Share My Secrets Online",subtitle:"Stay safe — strangers are not friends",g:["#880E4F","#D81B60"],mid:"#AD1457",dark:"#880E4F",affBg:"#fce4ec",affBd:"#F48FB1",affLb:"#AD1457",affTx:"#4a0028",duaBg:"#fce4ec",duaLb:"#AD1457",ar:"وَلَا تُلْقُوا بِأَيْدِيكُمْ إِلَى التَّهْلُكَةِ",tr:"Do not throw yourselves into destruction.",ref:"Surah Al-Baqarah 2:195",aff:"I am precious and protected by Allah. I keep my information safe — always!",tips:["Never share your name, school, address, or photos with strangers.","An online 'friend' you've never met in real life is still a stranger.","Tell a parent immediately if anyone online makes you uncomfortable."],dua:"اللَّهُمَّ احْفَظْنِي مِنَ الشَّرِّ",duaT:"O Allah, protect me from harm."},
+ {day:"Day 6",emoji:"🎮",title:"Gaming With Balance Is Okay",subtitle:"Moderation is from the Sunnah",g:["#004D40","#00897B"],mid:"#00695C",dark:"#004D40",affBg:"#e0f2f1",affBd:"#4DB6AC",affLb:"#00695C",affTx:"#00201c",duaBg:"#e0f2f1",duaLb:"#00695C",ar:"كُلُوا وَاشْرَبُوا وَلَا تُسْرِفُوا",tr:"Eat and drink, but do not be excessive.",ref:"Surah Al-A'raf 7:31",aff:"I enjoy games without letting them control me. I pray, then I play — in that order!",tips:["Only play games your parents have approved as safe and appropriate.","Never talk to strangers in online game chats or share your location.","Stop gaming when prayer time comes — salah always wins!"],dua:"اللَّهُمَّ اجْعَلْنِي مِنَ الْمُعْتَدِلِينَ",duaT:"O Allah, make me balanced in all things."},
+ {day:"Day 7",emoji:"🌟",title:"I Am a Digital Champion!",subtitle:"Be the best version of yourself, always",g:["#311B92","#5E35B1"],mid:"#4527A0",dark:"#311B92",affBg:"#ede7f6",affBd:"#9575CD",affLb:"#4527A0",affTx:"#1a0058",duaBg:"#ede7f6",duaLb:"#4527A0",ar:"وَتَعَاوَنُوا عَلَى الْبِرِّ وَالتَّقْوَىٰ",tr:"Cooperate in righteousness and piety.",ref:"Surah Al-Ma'idah 5:2",aff:"I use the internet to learn, create, and spread kindness — I am a light online!",tips:["Share these cards with a friend to help them stay safe online too.","Make dua every morning: 'O Allah, protect me online today.'","Be the Muslim online that the Prophet ﷺ would be proud of."],dua:"اللَّهُمَّ اجْعَلْنِي نُورًا",duaT:"O Allah, make me a light."}
+];
+function geo(){return '<svg class="geo-bg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polygon points="100,10 190,55 190,145 100,190 10,145 10,55" fill="none" stroke="white" stroke-width="3"/><polygon points="100,30 170,67.5 170,132.5 100,170 30,132.5 30,67.5" fill="none" stroke="white" stroke-width="2"/><polygon points="100,50 150,75 150,125 100,150 50,125 50,75" fill="none" stroke="white" stroke-width="1.5"/><circle cx="100" cy="100" r="25" fill="none" stroke="white" stroke-width="2"/><circle cx="100" cy="100" r="12" fill="white" opacity="0.2"/><line x1="100" y1="10" x2="100" y2="190" stroke="white" stroke-width="0.8" opacity="0.5"/><line x1="10" y1="100" x2="190" y2="100" stroke="white" stroke-width="0.8" opacity="0.5"/></svg>';}
+var box=document.getElementById('cards');
+cards.forEach(function(c){
+  var stars=''; for(var i=0;i<5;i++){stars+='<div class="star-box">★</div>';}
+  var tips=c.tips.map(function(t,i){return '<div class="tip-item"><div class="tip-num" style="background:'+c.mid+'">'+(i+1)+'</div><div class="tip-text">'+t+'</div></div>';}).join('');
+  var el=document.createElement('div'); el.className='card';
+  el.innerHTML=
+   '<div class="card-header" style="background:linear-gradient(135deg,'+c.g[0]+','+c.g[1]+')">'+geo()+
+     '<div class="day-badge">'+c.day+'</div><div class="card-emoji">'+c.emoji+'</div>'+
+     '<div class="card-title">'+c.title+'</div><div class="card-subtitle">'+c.subtitle+'</div></div>'+
+   '<div class="card-body">'+
+     '<div class="ayah-box"><span class="ayah-arabic">'+c.ar+'</span><div class="ayah-translation">"'+c.tr+'"</div><div class="ayah-ref">'+c.ref+'</div></div>'+
+     '<div class="affirmation-box" style="background:'+c.affBg+';border-color:'+c.affBd+'"><div class="affirmation-label" style="color:'+c.affLb+'">✨ My Daily Affirmation</div><div class="affirmation-text" style="color:'+c.affTx+'">"'+c.aff+'"</div></div>'+
+     '<div><div class="section-label">My 3 Actions Today</div>'+tips+'</div>'+
+     '<div class="dua-box" style="background:'+c.duaBg+'"><div class="dua-label" style="color:'+c.duaLb+'">🤲 Today\'s Dua</div><div class="dua-text" style="color:'+c.dark+'">'+c.dua+'</div><div style="font-size:11px;color:'+c.duaLb+';font-style:italic;margin-top:2px">'+c.duaT+'</div></div>'+
+     '<div class="stars-section"><div class="star-caption">How did I do today? Colour a star! ⭐</div><div class="stars-row">'+stars+'</div></div>'+
+   '</div>';
+  box.appendChild(el);
+});
+</script>
+</body>
+</html>
